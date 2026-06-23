@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Case Converter - DevKit</title>
+    <meta name="description" content="Convert text between UPPERCASE, lowercase, and Title Case.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">DevKit</a>
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation">☰</button>
+            <div class="nav-links" id="nav-links">
+                <a href="index.html">Home</a>
+                <a href="password.html">Password Generator</a>
+                <a href="counter.html">Word Counter</a>
+                <a href="textcase.html">Text Converter</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container" style="padding-top: 3rem;">
+        <section class="card" id="case-converter">
+            <h2>Text Case Converter</h2>
+            <textarea id="case-input" placeholder="Type or paste text here..." rows="6"></textarea>
+            <div class="button-group">
+                <button id="btn-uppercase" class="btn btn-primary">Uppercase</button>
+                <button id="btn-lowercase" class="btn btn-primary">Lowercase</button>
+                <button id="btn-titlecase" class="btn btn-primary">Title Case</button>
+                <button id="btn-case-copy" class="btn btn-secondary">Copy</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-info">
+                <p>Built By : Durga Rohith</p>
+                <p>Email : durgarohith23@gmail.com</p>
+            </div>
+            <a href="https://digitalheroesco.com" class="btn btn-footer" target="_blank" rel="noopener noreferrer">Built for Digital Heroes</a>
+        </div>
+    </footer>
+
+    <script src="js/nav.js"></script>
+    <script src="js/textcase.js"></script>
+</body>
+</html>

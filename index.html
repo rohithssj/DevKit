@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,10 +8,22 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">DevKit</a>
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation">☰</button>
+            <div class="nav-links" id="nav-links">
+                <a href="index.html">Home</a>
+                <a href="password.html">Password Generator</a>
+                <a href="counter.html">Word Counter</a>
+                <a href="textcase.html">Text Converter</a>
+            </div>
+        </div>
+    </nav>
+
     <header class="hero">
         <div class="container">
             <h1>DevKit</h1>
@@ -21,88 +32,45 @@
     </header>
 
     <main class="container">
+        <!-- JSON Formatter Tool -->
+        <section class="card" id="json-formatter">
+            <h2>JSON Formatter</h2>
+            <textarea id="json-input" placeholder="Paste your JSON here..." rows="4"></textarea>
+            <div id="json-error" class="error-msg"></div>
+            <button id="json-format" class="btn btn-primary">Format JSON</button>
+            <textarea id="json-output" placeholder="Formatted JSON will appear here..." rows="6" readonly></textarea>
+            <button id="json-copy" class="btn btn-secondary">Copy</button>
+        </section>
+
+        <!-- Tools Links -->
+        <h2 style="margin-bottom: 1.5rem; color: var(--text-primary);">More Tools</h2>
         <div class="grid">
-            <!-- 1. Password Generator -->
-            <section class="card" id="password-generator">
-                <h2>Password Generator</h2>
-                <div class="input-group">
-                    <label for="pwd-length">Length: <span id="pwd-length-val">12</span></label>
-                    <input type="range" id="pwd-length" min="4" max="32" value="12">
-                </div>
-                <div class="checkbox-group">
-                    <label>
-                        <input type="checkbox" id="pwd-numbers" checked>
-                        Include Numbers
-                    </label>
-                    <label>
-                        <input type="checkbox" id="pwd-symbols" checked>
-                        Include Symbols
-                    </label>
-                </div>
-                <div class="output-group">
-                    <input type="text" id="pwd-output" readonly placeholder="Generated password">
-                    <button id="pwd-copy" class="btn btn-secondary">Copy</button>
-                </div>
-                <button id="pwd-generate" class="btn btn-primary">Generate</button>
-            </section>
-
-            <!-- 2. JSON Formatter -->
-            <section class="card" id="json-formatter">
-                <h2>JSON Formatter</h2>
-                <textarea id="json-input" placeholder="Paste your JSON here..." rows="4"></textarea>
-                <div id="json-error" class="error-msg"></div>
-                <button id="json-format" class="btn btn-primary">Format JSON</button>
-                <textarea id="json-output" placeholder="Formatted JSON will appear here..." rows="6"
-                    readonly></textarea>
-                <button id="json-copy" class="btn btn-secondary">Copy</button>
-            </section>
-
-            <!-- 3. Word & Character Counter -->
-            <section class="card" id="text-counter">
-                <h2>Word & Character Counter</h2>
-                <textarea id="counter-input" placeholder="Type or paste text here..." rows="5"></textarea>
-                <div class="counter-stats">
-                    <div class="stat-box">
-                        <span class="stat-val" id="stat-words">0</span>
-                        <span class="stat-label">Words</span>
-                    </div>
-                    <div class="stat-box">
-                        <span class="stat-val" id="stat-chars">0</span>
-                        <span class="stat-label">Characters</span>
-                    </div>
-                    <div class="stat-box">
-                        <span class="stat-val" id="stat-sentences">0</span>
-                        <span class="stat-label">Sentences</span>
-                    </div>
-                </div>
-            </section>
-
-            <!-- 4. Text Case Converter -->
-            <section class="card" id="case-converter">
-                <h2>Text Case Converter</h2>
-                <textarea id="case-input" placeholder="Type or paste text here..." rows="5"></textarea>
-                <div class="button-group">
-                    <button id="btn-uppercase" class="btn btn-primary">Uppercase</button>
-                    <button id="btn-lowercase" class="btn btn-primary">Lowercase</button>
-                    <button id="btn-titlecase" class="btn btn-primary">Title Case</button>
-                    <button id="btn-case-copy" class="btn btn-secondary">Copy</button>
-                </div>
-            </section>
+            <a href="password.html" class="tool-card">
+                <h3>Password Generator</h3>
+                <p>Generate secure, customizable passwords instantly.</p>
+            </a>
+            <a href="counter.html" class="tool-card">
+                <h3>Word Counter</h3>
+                <p>Count words, characters, sentences, and paragraphs.</p>
+            </a>
+            <a href="textcase.html" class="tool-card">
+                <h3>Text Case Converter</h3>
+                <p>Easily switch between UPPERCASE, lowercase, and Title Case.</p>
+            </a>
         </div>
     </main>
 
     <footer>
         <div class="container footer-content">
             <div class="footer-info">
-                <p>Built By : Durga Rohith </p>
+                <p>Built By : Durga Rohith</p>
                 <p>Email : durgarohith23@gmail.com</p>
             </div>
-            <a href="https://digitalheroesco.com" class="btn btn-footer" target="_blank" rel="noopener noreferrer">Built
-                for Digital Heroes</a>
+            <a href="https://digitalheroesco.com" class="btn btn-footer" target="_blank" rel="noopener noreferrer">Built for Digital Heroes</a>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="js/nav.js"></script>
+    <script src="js/json.js"></script>
 </body>
-
 </html>
